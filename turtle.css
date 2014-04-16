@@ -1,0 +1,13 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+.turtle-canvas {
+    width: 300px;
+    height: 300px;
+}
+
