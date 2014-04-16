@@ -16,3 +16,12 @@ Manual
 * (~/.ipython/profile_turtle/static/custom/ by default).
 * Add "require(['/static/custom/turtle.js'])" to the custom.js file.
 * Run '''ipython notebook --profile=turtle'''.
+
+
+
+The Turtle Protocol
+-------------------
+
+Just brainstorming for now.
+
+A new turtle context always begins with nothing.

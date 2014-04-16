@@ -25,8 +25,8 @@ class Turtle(object):
     def __getattr__(self, attr):
         return MockMethod(attr, self)
 
-    def log(self, *args, **kwargs):
-        self._log.append([args, kwargs])
+    def log(self, method, args, kwargs):
+        self._log.append([method, args, kwargs])
 
     def render(self):
         if self.last_executed is not None:
