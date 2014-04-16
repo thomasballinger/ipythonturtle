@@ -46,19 +46,17 @@ class Render(object):
         self.to_run = to_run
         self.uuid = uuid.uuid4()
 
-    #def __repr__(self):
-    #    return ('Render Instructions:\n'+repr(self.already_run)
-    #           + repr(self.to_run))
-    #def _repr_javascript_(self):
-    #    return 'alert("hi!");'
+    def __repr__(self):
+        return ('Render Instructions:\n'+repr(self.already_run)
+               + repr(self.to_run))
 
     def _ipython_display_(self):
         json_already = json.dumps(self.already_run)
         json_to_run = json.dumps(self.to_run)
         display_html(
             '<div id="{}" style="height: 300px; width:80%;"'
-            'data-already-run="{}" '
-            'data-to-run="{}"></div>'.format(self.uuid, json_already,
+            'data-already-run=\'{}\' '
+            'data-to-run=\'{}\'></div>'.format(self.uuid, json_already,
                                              json_to_run),
             raw=True)
         display_javascript('window.turtle("{}");'.format(self.uuid),

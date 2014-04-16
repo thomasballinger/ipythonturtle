@@ -61,8 +61,10 @@ window.turtle = function(selector){
   ctx.fillRect(0,0,150,75);
   console.log('running turtle code');
   t = new TurtleCanvas(ctx);
-  t.run_already_commands($output.data('already_run'));
-  t.run_commands($output.data('to_run'));
+  console.log('already:', $output.data('already-run'));
+  console.log('to run:', $output.data('to-run'));
+  t.run_already_commands($output.data('already-run'));
+  t.run_commands($output.data('to-run'));
 }
 
 
