@@ -16,12 +16,13 @@ def main():
         os.symlink(orig, link)
     customjs = os.path.expanduser('~/.ipython/profile_default/static/custom/custom.js')
     for basefn in files:
-        static_link = "require(['/static/custom/{}'])".format(basefn)
-        with open(customjs, 'r') as f:
-            if static_link not in f.read():
-                with open(customjs, 'a') as f:
-                    f.write('\n')
-                    f.write(static_link)
-                    f.write('\n')
+        if basefn.endswith('.js'):
+            static_link = "require(['/static/custom/{}'])".format(basefn)
+            with open(customjs, 'r') as f:
+                if static_link not in f.read():
+                    with open(customjs, 'a') as f:
+                        f.write('\n')
+                        f.write(static_link)
+                        f.write('\n')
 if __name__ == '__main__':
     main()
