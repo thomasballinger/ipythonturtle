@@ -2,6 +2,11 @@ Turtle graphics in IPython notebook.
 
 Based on the work of https://github.com/macewanCMPT395/aspidites
 
+Outdated! This was a protype built during PyCon 2014 Sprints at the suggestion
+of Greg Wilson to make the turtle module work better with IPython. It was
+never completed. The goal was to factor out some of the work in Aspidites into
+a new repo.
+
 
 Installation
 ------------
